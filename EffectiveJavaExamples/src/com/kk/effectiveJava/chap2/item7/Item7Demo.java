@@ -1,4 +1,4 @@
-package com.kk.effectiveJva.chap2.item7;
+package com.kk.effectiveJava.chap2.item7;
 
 import java.util.WeakHashMap;
 
