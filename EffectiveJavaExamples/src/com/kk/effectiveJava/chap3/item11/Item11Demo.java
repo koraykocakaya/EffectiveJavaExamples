@@ -24,8 +24,10 @@ public class Item11Demo {
 		System.out.println(p1.hashCode());
 		System.out.println(p2.hashCode());
 		System.out.println(p3.hashCode());
-		System.out.println(p4.hashCode());
-		System.out.println(p5.hashCode());
+		
+		// Hashcode'un hexadecimal representation basar
+		System.out.println(p4);
+		System.out.println(p5);
 	}
 
 	public static class Person {
