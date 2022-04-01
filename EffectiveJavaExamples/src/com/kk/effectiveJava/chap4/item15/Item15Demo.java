@@ -6,8 +6,8 @@ package com.kk.effectiveJava.chap4.item15;
  * 3. child class, parent classin memberini daha restricted yapamamaktadir
  * 4. length'i 0 olmayan bir array daima mutabledir, bu yuden bu arrayi public yapmayip, karsilik gelen Unmodifiablelist'i public yapmak saglikli olacaktir
  * 5. Bu acidan public static final verdigimiz bir objenin immutable oldugundan emin olunmasi gerekmektedir
- * 5. java-9'daki module yapisi ile de bazi accessebility restrictionlar uygulanabilmektedir
- * 6. Verdigimiz constantlar haric, public classlarin public fieldi olmamalidir
+ * 6. java-9'daki module yapisi ile de bazi accessebility restrictionlar uygulanabilmektedir
+ * 7. Verdigimiz constantlar haric, public classlarin public fieldi olmamalidir
  * @author korayk
  *
  */
