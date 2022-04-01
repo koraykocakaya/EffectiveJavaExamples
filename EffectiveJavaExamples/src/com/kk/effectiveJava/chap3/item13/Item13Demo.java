@@ -6,7 +6,11 @@ import java.util.EmptyStackException;
 /**
  * Clone islemini dikkatle yapmamiz gerektigini ogutlemektedir.
  * 1. Stack orneginde oldugu gibi icinde mutable obje tutan classlarda clone sonrasi ana objede degisiklik yaptigimizda clone edilen obje de bundan etkilenecektir
- * Bu tarz durumlar icin clone metodunun icinde ilgili objeleri de kopyalamak gerekli olacaktir
+ * 2. Bu tarz durumlar icin clone metodunun icinde ilgili objeleri de kopyalamak gerekli olacaktir
+ * 3. clone'u recursive bicimde yapmak saglikli olacaktir
+ * 4. Clone'lanmasini istemedigimiz bir extendable class varsa, clone metodunu Override edip CloneNotSupportedException throw etmek saglikli olacaktir
+ * 5. Objeyi kopyalamanin daha saglikli yolu copy-constructor veya copy-factory'dir, 
+ * 6. bu sekilde tip de degisebilmektedir, 	new TreeSet<>(set) diyerek elimizdeki HashSet'i TreeSet'e cevirebilmekteyiz (conversion constructor)
  * @author korayk
  *
  */
@@ -72,5 +76,6 @@ class Stack implements Cloneable {
 	protected Stack clone() throws CloneNotSupportedException {
 		// TODO Auto-generated method stub
 		return (Stack)super.clone();
+		
 	}
 }
