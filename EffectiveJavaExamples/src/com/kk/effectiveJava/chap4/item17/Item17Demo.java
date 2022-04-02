@@ -6,7 +6,7 @@ package com.kk.effectiveJava.chap4.item17;
  * 2.1 Objenin durumunu degistirecek metotlar olmamalidir (mutator)
  * 2.2 Tum fieldlar final olmalidir
  * 2.3 
- * @author korayk
+ * @author korayk 
  *
  */
 public class Item17Demo {
