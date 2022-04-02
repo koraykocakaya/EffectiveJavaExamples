@@ -1,5 +1,6 @@
 package com.kk.effectiveJava.chap3.item14;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,7 +9,7 @@ import java.util.List;
 /**
  * 1. Comparator kullanirken nasil tasarlamamiz gerektigini anlatmaktadir
  * 2. Comparable yapisi equals ile uyumlu olmasi gerekmektedir, yani x.compareto(y) == 0 ise x.equals(y) true donmesi gerekmektedir
- * 3. equals gibi reflexivity, symmetry ve trasivity uyması gerekmektdir
+ * 3. equals gibi reflexivity, symmetry ve transivity uyması gerekmektdir
  * 4. Most significant fielddan baslayarak, least significant giderek comparison yapmak saglikli olacaktir
  * 5. Comparator static metotlari (comparing, thenComparingInt gibi) yardimiyla da tanimlayabiliriz, bu sekilde tanimlamak daha anlasilir olacaktir
  * 6. hashcode uzerinden comparator yazmak istiyorsak, direkt farkliari uzerinden degil bunu Integer.compare ile yapmak saglikli olacaktir
@@ -23,6 +24,9 @@ public class Item14Demo {
 										  new Car("Mercedes", "C180", 2015));
 		Collections.sort(carList);
 		System.out.println(carList);
+		List<Car> carListCopied = new ArrayList<Car>(carList);
+		Collections.sort(carListCopied, Car.hashComparator);
+		System.out.println(carListCopied);
 	}
 }
 
@@ -35,7 +39,7 @@ class Car implements Comparable<Car>{
 																.thenComparing(car -> car.getModel())
 																.thenComparingInt(car -> car.getYear());
 	
-	private static final Comparator<Car> hashComparator = new Comparator<Car>() { // Comparator.comparingInt((Car car) -> car.hashCode()) olarak da yapabiliriz
+	static final Comparator<Car> hashComparator = new Comparator<Car>() { // Comparator.comparingInt((Car car) -> car.hashCode()) olarak da yapabiliriz
 		@Override
 		public int compare(Car o1, Car o2) {
 			return Integer.compare(o1.hashCode(), o2.hashCode());
