@@ -8,9 +8,13 @@ import java.math.BigDecimal;
  * 2.1 Objenin durumunu degistirecek metotlar olmamalidir (mutator)
  * 2.2 Tum fieldlar final ve private olmalidir
  * 2.3 Objedeki mutable componenta erisim kisitlanmalidir (direkt accessor ile vs return edilmemeli)
- * 3. Functional paradigm kullanilmaktadir, yani bir islem yaptigimizda objeyi modify etmez yenisini return eder, bu yuzden asagidaki ornekte de add yerine plus denilmistir
+ * 3. Functional paradigm kullanilmaktadir, yani bir islem yaptigimizda objeyi modify etmez yenisini return eder, bu yuzden asagidaki ornekte de metot adi add yerine plus kullanilmaktadir
  * 4. Immutable objeler thread-safe, bu yuzden ekstra bir kontrole ihtiyac duymamaktadir
- * 5. 
+ * 5. Her bir ayri deger icin yeni obje yaratmamiz gerektigi icin costly olabilmektedir.
+ * 6. Bunun icin immutable classlarin companion classlari kullabilabilmektedir (String icin StringBuilder companion class gibi)
+ * 7. Static class yardimiyla yeni obje return ederek de kullanabiliriz (private constructor ile), boylece classi final olmadan da kullabilmektedir (Item1)
+ * 8. Immutable classlar icinde bazi degerleri cacheleyip hep ayni degerlerin donulmesi saglanabilmektedir (String hashcode'da oldugu gibi-Lazy Initialization)
+ * 9. Bir classi immutable yapamasak bile elimizden geldigince mutability azaltilmalidir
  * @author korayk 
  *
  */
