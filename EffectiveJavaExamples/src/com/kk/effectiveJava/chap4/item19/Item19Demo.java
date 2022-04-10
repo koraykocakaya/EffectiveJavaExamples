@@ -9,7 +9,7 @@ import java.time.Instant;
  * 4. Inheritance icin ayri bir dokuman yazilmasi saglikli olacaktir
  * 5. Inheritance icin bazı kurallar bulunmaktadir, class'ta constructor Overridable metot cagirmamalidir, private,statik vs. sorun olmayacaktir
  * 6. Asagidaki ornekte instant Parent constructor cagrildiginda null oldugu icin final obje icin hem null hem de valeu basmis olduk
- * 7. Bir classin inherit edilmesine izin vermemek icin classi final yapılması veya tum constructolarin private (veya package-private) constructor yaratılması gerekmektedir  
+ * 7. Bir classin inherit edilmesine izin vermemek icin classi final yapılması veya tum constructolarin private (veya package-private) constructor yaratılması gerekmektedir
  * @author korayk
  *
  */
